@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
     agent any
 
     stages {
@@ -22,8 +22,7 @@
                 echo 'Generating build report'
                 bat 'echo Python CI Pipeline - BUILD SUCCESSFUL > build-report.txt'
                 bat 'echo Unit tests executed by Jenkins >> build-report.txt'
-                archiveArtifacts artifacts: 'build-report.txt,app.py,test_app.py',
-                                 fingerprint: true
+                archiveArtifacts artifacts: 'build-report.txt,app.py,test_app.py', fingerprint: true
             }
         }
     }
