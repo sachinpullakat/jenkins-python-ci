@@ -6,6 +6,8 @@ def subtract(a, b):
 
 def multiply(a, b):
     return a * b
+def square(a):
+    return a * a
 
 if __name__ == "__main__":
     print("Python CI Demo Application")
